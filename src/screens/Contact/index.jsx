@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
+import styles from './styles'
 
 export default function Contact() {
   const navigation = useNavigation()
@@ -13,21 +14,3 @@ export default function Contact() {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button: {
-    backgroundColor: 'blue',
-    padding: 10,
-    borderRadius: 5,
-    margin: 10
-  },
-  textbutton: {
-    color: 'white'
-  }
-});

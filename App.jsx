@@ -8,18 +8,59 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //importar as telas
-import Home from './src/screens/home';
-import Contact from './src/screens/contact';
-import Profile from './src/screens/profile';
+import Home from './src/screens/Home';
+import Contact from './src/screens/Contact';
+import Profile from './src/screens/Profile';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
+
   return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Contact" component={Contact} />
-          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Home" component={Home} 
+          options={
+            {title: 'Tela Inicial',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerTitleAlign: 'center'
+          }
+          
+          }/>
+          <Stack.Screen name="Contact" component={Contact} options={
+            {title: 'Tela de Contato',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerTitleAlign: 'center',
+            headerShown: false
+          }
+          
+          }/>
+          <Stack.Screen name="Profile" component={Profile} options={
+            {title: 'Tela de Perfil',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerTitleAlign: 'center',
+            headerShown: false
+          }
+          
+          
+          }/>
         </Stack.Navigator>
         <StatusBar style='auto'/>
       </NavigationContainer>
